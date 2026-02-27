@@ -6,7 +6,10 @@
     <title>SalesGrok — Speak Your Client's Language</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --ink: #0a0a0f;
@@ -26,6 +29,8 @@
             --off-white: #e8e8f0;
             --grey: #6b6b7e;
             --grey-2: #9090a8;
+            --brand: #4f3ff0;
+            --brand-light:#7c6ff7;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -76,18 +81,18 @@
             letter-spacing: -0.5px;
         }
 
-        .nav-logo-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--electric);
-            border-radius: 50%;
-            box-shadow: 0 0 12px var(--electric);
-            animation: pulse 2s infinite;
-        }
-
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.6; transform: scale(0.8); }
+        }
+
+        .setup-logo {
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, var(--brand), var(--brand-light));
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 22px; margin-bottom: 22px;
+            box-shadow: 0 8px 24px rgba(79,63,240,.35);
         }
 
         .nav-pill {
@@ -1023,335 +1028,338 @@
     </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav>
-    <div class="nav-logo">
-        <div class="nav-logo-dot"></div>
-        SalesGrok
-    </div>
-    <div class="nav-pill">CLOSE MORE DEALS</div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow-2"></div>
-
-    <div class="hero-inner">
-        <div class="hero-left">
-            <div class="hero-eyebrow">AI-Powered Sales Tool</div>
-            <h1>Mirror Your Client's <em>Language.</em> Close More Deals.</h1>
-            <p class="hero-sub">SalesGrok analyzes your prospect's communication style and rewrites your emails to match it perfectly — building instant rapport before your first meeting.</p>
-
-            <div class="hero-actions">
-                <button class="btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Get SalesGrok — $67
-                </button>
-                <a class="btn-ghost" href="#features">
-                    See how it works
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <div class="setup-logo mb-0">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-n">2.4<span>×</span></div>
-                    <div class="stat-l">Higher response rate</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-n">78<span>%</span></div>
-                    <div class="stat-l">Faster email writing</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-n">100<span>%</span></div>
-                    <div class="stat-l">Style match accuracy</div>
-                </div>
-            </div>
+            SalesGrok
         </div>
+        <div class="nav-pill">CLOSE MORE DEALS</div>
+    </nav>
 
-        <div class="hero-right">
-            <div class="demo-card">
-                <div class="demo-titlebar">
-                    <div class="dot dot-r"></div>
-                    <div class="dot dot-y"></div>
-                    <div class="dot dot-g"></div>
-                    <div class="demo-titlebar-label">SalesGrok — Alan, Tech Startup Founder</div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-eyebrow">AI-Powered Sales Tool</div>
+                <h1>Mirror Your Client's <em>Language.</em> Close More Deals.</h1>
+                <p class="hero-sub">SalesGrok analyzes your prospect's communication style and rewrites your emails to match it perfectly — building instant rapport before your first meeting.</p>
+
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Get SalesGrok — $67
+                    </button>
+                    <a class="btn-ghost" href="#features">
+                        See how it works
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
-                <div class="demo-body">
-                    <div class="demo-section-label">Prospect's email</div>
-                    <div class="demo-input-block">
-                        "Hey, we're currently evaluating a few tools but honestly not in a rush. Our team is pretty lean right now so any solution needs to be dead simple. What makes your thing different?"
-                    </div>
 
-                    <div class="demo-arrow">
-                        <div class="demo-arrow-line"></div>
-                        <div class="demo-tag">✦ Style analysis complete</div>
-                        <div class="demo-arrow-line"></div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-n">2.4<span>×</span></div>
+                        <div class="stat-l">Higher response rate</div>
                     </div>
-
-                    <div class="demo-section-label" style="margin-top:16px;">Your transformed reply</div>
-                    <div class="demo-output-block">
-                        "<strong>Hey Alan</strong> — totally get it, no rush on our end either.
-                        <br><br>
-                        Honestly, the <strong>one thing</strong> that makes us different: it's <strong>dead simple</strong> to set up, and lean teams love it because there's zero admin overhead. Most of our users are running it solo.
-                        <br><br>
-                        Worth a quick 15 mins to see if it fits your stack?"
+                    <div class="stat">
+                        <div class="stat-n">78<span>%</span></div>
+                        <div class="stat-l">Faster email writing</div>
                     </div>
-
-                    <div class="demo-footer">
-                        <div class="demo-footer-dot"></div>
-                        Mirrored: casual tone · "dead simple" · "lean" · direct CTA
+                    <div class="stat">
+                        <div class="stat-n">100<span>%</span></div>
+                        <div class="stat-l">Style match accuracy</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- TESTIMONIAL STRIP -->
-<section class="testimonial-section">
-    <div class="testimonial-inner">
-        <div class="quote-marks">"</div>
-        <div class="quote-text">I used to spend hours researching prospects' communication styles. Now SalesGrok does it in seconds. My response rate doubled in the first week.</div>
-        <div class="quote-author">
-            <div class="author-avatar"><img src="assets/img.jpg" alt="Sarah K."></div>
-            <div class="author-info">
-                <div class="author-name">Sarah K.</div>
-                <div class="author-role">Enterprise Sales · Verified User</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- API NOTICE -->
-<div class="api-banner" style="padding-top: 60px;" id="features">
-    <div class="api-banner-inner">
-        <div class="api-banner-icon">🔑</div>
-        <div class="api-banner-text"><strong>Requires your own API key.</strong> SalesGrok uses AI APIs for analysis. Bring your OpenAI or Anthropic key — we send setup instructions after purchase. Your key stays on your device, never on our servers.</div>
-    </div>
-</div>
-
-<!-- FEATURES -->
-<section class="features-section" style="padding-top: 80px;">
-    <div class="features-inner reveal">
-        <div class="section-header">
-            <div class="section-kicker">Features</div>
-            <div class="section-title">Built for Sales Professionals</div>
-            <div class="section-sub">Every tool you need to build rapport, save time, and close deals faster.</div>
-        </div>
-
-        <div class="features-grid">
-            <div class="feat">
-                <div class="feat-num">01</div>
-                <div class="feat-icon">🔬</div>
-                <h4>Analyze Client Lingo</h4>
-                <p>Paste their emails or LinkedIn messages. SalesGrok instantly identifies their vocabulary, tone, and communication patterns.</p>
-            </div>
-            <div class="feat">
-                <div class="feat-num">02</div>
-                <div class="feat-icon">↺</div>
-                <h4>Rewrite in Their Voice</h4>
-                <p>Write your draft normally, we'll transform it to match your prospect's exact style — formal, casual, technical, or anything in between.</p>
-            </div>
-            <div class="feat">
-                <div class="feat-num">03</div>
-                <div class="feat-icon">📈</div>
-                <h4>Build Instant Rapport</h4>
-                <p>When prospects feel you speak their language, trust builds faster. More replies, more meetings, more closed deals.</p>
-            </div>
-            <div class="feat">
-                <div class="feat-num">04</div>
-                <div class="feat-icon">⏱</div>
-                <h4>Save Hours Weekly</h4>
-                <p>Stop manually researching and adapting your writing. SalesGrok does it in seconds, giving you more time for actual selling.</p>
-            </div>
-            <div class="feat">
-                <div class="feat-num">05</div>
-                <div class="feat-icon">🧠</div>
-                <h4>Learn Your Own Style</h4>
-                <p>Save your own communication profiles for different types of clients — corporate, startups, executives, technical buyers.</p>
-            </div>
-            <div class="feat">
-                <div class="feat-num">06</div>
-                <div class="feat-icon">💾</div>
-                <h4>Style Library</h4>
-                <p>Store client profiles for future use. Perfect for long sales cycles or repeat business with existing clients.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-section">
-    <div class="how-inner reveal">
-        <div class="section-header">
-            <div class="section-kicker">How It Works</div>
-            <div class="section-title">Three steps.<br>Zero guesswork.</div>
-        </div>
-
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-num">01</div>
-                <h5>Upload Client Samples</h5>
-                <p>Paste 3–5 examples of your prospect's writing — emails, LinkedIn messages, anything. SalesGrok analyzes their unique style fingerprint.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">02</div>
-                <h5>Create a Style Profile</h5>
-                <p>Name and save the profile. Add notes about their industry, role, or any specific communication quirks you notice.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">03</div>
-                <h5>Write & Transform</h5>
-                <p>Write your draft as normal. Select their profile, click Transform — your email instantly matches their voice.</p>
-            </div>
-        </div>
-
-        <div style="margin-top: 24px; padding: 16px 24px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 10px; display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--grey-2);">
-            <div class="demo-footer-dot"></div>
-            Works entirely in your browser — your API key and client data never leave your device.
-        </div>
-    </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing-section" id="pricing" style="border-top: 1px solid var(--line);">
-    <div class="pricing-inner">
-        <div class="pricing-left reveal">
-            <div class="section-kicker">Pricing</div>
-            <h3>One price.<br>Lifetime access.<br>No subscription.</h3>
-            <p>SalesGrok is a one-time purchase. Pay once, use forever. Free updates included.</p>
-
-            <ul class="features-list">
-                <li><div class="check">✓</div> Unlimited style analyses</li>
-                <li><div class="check">✓</div> Unlimited text transformations</li>
-                <li><div class="check">✓</div> Unlimited saved client profiles</li>
-                <li><div class="check">✓</div> Lifetime access, no subscriptions</li>
-                <li><div class="check">✓</div> Free updates for life</li>
-                <li><div class="check">✓</div> Works on Windows, macOS & Linux</li>
-                <li><div class="check">✓</div> Bring your own API key (OpenAI, Anthropic…)</li>
-            </ul>
-        </div>
-
-        <div class="pricing-card-main reveal" style="transition-delay: 0.15s;">
-            <div class="pricing-card-top">
-                <div class="pricing-badge-2"><div class="blink"></div> LAUNCH SPECIAL</div>
-                <div class="price-display">
-                    <div class="price-main">$67</div>
-                    <div class="price-was">$97</div>
-                </div>
-                <div class="price-tag">one-time payment · no recurring fees</div>
-                <div class="discount-pill">31% OFF — Launch pricing ends soon</div>
-            </div>
-
-            <div class="pricing-card-bottom">
-                <div class="payment-steps">
-                    <div class="payment-step-item">
-                        <div class="ps-num">1</div>
-                        <div class="ps-text">Click the button below to <strong>email us</strong></div>
+            <div class="hero-right">
+                <div class="demo-card">
+                    <div class="demo-titlebar">
+                        <div class="dot dot-r"></div>
+                        <div class="dot dot-y"></div>
+                        <div class="dot dot-g"></div>
+                        <div class="demo-titlebar-label">SalesGrok — Alan, Tech Startup Founder</div>
                     </div>
-                    <div class="payment-step-item">
-                        <div class="ps-num">2</div>
-                        <div class="ps-text">Receive your <strong>unique payment code</strong> and instructions</div>
-                    </div>
-                    <div class="payment-step-item">
-                        <div class="ps-num">3</div>
-                        <div class="ps-text">Send payment via <strong>Remitly</strong> or your preferred method</div>
-                    </div>
-                    <div class="payment-step-item">
-                        <div class="ps-num">4</div>
-                        <div class="ps-text">Include your code — we verify and <strong>send your app immediately</strong></div>
+                    <div class="demo-body">
+                        <div class="demo-section-label">Prospect's email</div>
+                        <div class="demo-input-block">
+                            "Hey, we're currently evaluating a few tools but honestly not in a rush. Our team is pretty lean right now so any solution needs to be dead simple. What makes your thing different?"
+                        </div>
+
+                        <div class="demo-arrow">
+                            <div class="demo-arrow-line"></div>
+                            <div class="demo-tag">✦ Style analysis complete</div>
+                            <div class="demo-arrow-line"></div>
+                        </div>
+
+                        <div class="demo-section-label" style="margin-top:16px;">Your transformed reply</div>
+                        <div class="demo-output-block">
+                            "<strong>Hey Alan</strong> — totally get it, no rush on our end either.
+                            <br><br>
+                            Honestly, the <strong>one thing</strong> that makes us different: it's <strong>dead simple</strong> to set up, and lean teams love it because there's zero admin overhead. Most of our users are running it solo.
+                            <br><br>
+                            Worth a quick 15 mins to see if it fits your stack?"
+                        </div>
+
+                        <div class="demo-footer">
+                            <div class="demo-footer-dot"></div>
+                            Mirrored: casual tone · "dead simple" · "lean" · direct CTA
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="code-block">Your Unique Code: SGRK-XXXX</div>
+    <!-- TESTIMONIAL STRIP -->
+    <section class="testimonial-section">
+        <div class="testimonial-inner">
+            <div class="quote-marks">"</div>
+            <div class="quote-text">I used to spend hours researching prospects' communication styles. Now SalesGrok does it in seconds. My response rate doubled in the first week.</div>
+            <div class="quote-author">
+                <div class="author-avatar"><img src="assets/img.jpg" alt="Sarah K."></div>
+                <div class="author-info">
+                    <div class="author-name">Sarah K.</div>
+                    <div class="author-role">Enterprise Sales · Verified User</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="contact-line">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Email confirmation to <a href="mailto:mosasabasaba@soundandcolor.dev">mosasabasaba@soundandcolor.dev</a> with your code
+    <!-- API NOTICE -->
+    <div class="api-banner" style="padding-top: 60px;" id="features">
+        <div class="api-banner-inner">
+            <div class="api-banner-icon">🔑</div>
+            <div class="api-banner-text"><strong>Requires your own API key.</strong> SalesGrok uses AI APIs for analysis. Bring your OpenAI or Anthropic key — we send setup instructions after purchase. Your key stays on your device, never on our servers.</div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="features-section" style="padding-top: 80px;">
+        <div class="features-inner reveal">
+            <div class="section-header">
+                <div class="section-kicker">Features</div>
+                <div class="section-title">Built for Sales Professionals</div>
+                <div class="section-sub">Every tool you need to build rapport, save time, and close deals faster.</div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feat">
+                    <div class="feat-num">01</div>
+                    <div class="feat-icon">🔬</div>
+                    <h4>Analyze Client Lingo</h4>
+                    <p>Paste their emails or LinkedIn messages. SalesGrok instantly identifies their vocabulary, tone, and communication patterns.</p>
+                </div>
+                <div class="feat">
+                    <div class="feat-num">02</div>
+                    <div class="feat-icon">↺</div>
+                    <h4>Rewrite in Their Voice</h4>
+                    <p>Write your draft normally, we'll transform it to match your prospect's exact style — formal, casual, technical, or anything in between.</p>
+                </div>
+                <div class="feat">
+                    <div class="feat-num">03</div>
+                    <div class="feat-icon">📈</div>
+                    <h4>Build Instant Rapport</h4>
+                    <p>When prospects feel you speak their language, trust builds faster. More replies, more meetings, more closed deals.</p>
+                </div>
+                <div class="feat">
+                    <div class="feat-num">04</div>
+                    <div class="feat-icon">⏱</div>
+                    <h4>Save Hours Weekly</h4>
+                    <p>Stop manually researching and adapting your writing. SalesGrok does it in seconds, giving you more time for actual selling.</p>
+                </div>
+                <div class="feat">
+                    <div class="feat-num">05</div>
+                    <div class="feat-icon">🧠</div>
+                    <h4>Learn Your Own Style</h4>
+                    <p>Save your own communication profiles for different types of clients — corporate, startups, executives, technical buyers.</p>
+                </div>
+                <div class="feat">
+                    <div class="feat-num">06</div>
+                    <div class="feat-icon">💾</div>
+                    <h4>Style Library</h4>
+                    <p>Store client profiles for future use. Perfect for long sales cycles or repeat business with existing clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+        <div class="how-inner reveal">
+            <div class="section-header">
+                <div class="section-kicker">How It Works</div>
+                <div class="section-title">Three steps.<br>Zero guesswork.</div>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h5>Upload Client Samples</h5>
+                    <p>Paste 3–5 examples of your prospect's writing — emails, LinkedIn messages, anything. SalesGrok analyzes their unique style fingerprint.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h5>Create a Style Profile</h5>
+                    <p>Name and save the profile. Add notes about their industry, role, or any specific communication quirks you notice.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h5>Write & Transform</h5>
+                    <p>Write your draft as normal. Select their profile, click Transform — your email instantly matches their voice.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px 24px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 10px; display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--grey-2);">
+                <div class="demo-footer-dot"></div>
+                Works entirely in your browser — your API key and client data never leave your device.
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section" id="pricing" style="border-top: 1px solid var(--line);">
+        <div class="pricing-inner">
+            <div class="pricing-left reveal">
+                <div class="section-kicker">Pricing</div>
+                <h3>One price.<br>Lifetime access.<br>No subscription.</h3>
+                <p>SalesGrok is a one-time purchase. Pay once, use forever. Free updates included.</p>
+
+                <ul class="features-list">
+                    <li><div class="check">✓</div> Unlimited style analyses</li>
+                    <li><div class="check">✓</div> Unlimited text transformations</li>
+                    <li><div class="check">✓</div> Unlimited saved client profiles</li>
+                    <li><div class="check">✓</div> Lifetime access, no subscriptions</li>
+                    <li><div class="check">✓</div> Free updates for life</li>
+                    <li><div class="check">✓</div> Works on Windows, macOS & Linux</li>
+                    <li><div class="check">✓</div> Bring your own API key (OpenAI, Anthropic…)</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card-main reveal" style="transition-delay: 0.15s;">
+                <div class="pricing-card-top">
+                    <div class="pricing-badge-2"><div class="blink"></div> LAUNCH SPECIAL</div>
+                    <div class="price-display">
+                        <div class="price-main">$67</div>
+                        <div class="price-was">$97</div>
+                    </div>
+                    <div class="price-tag">one-time payment · no recurring fees</div>
+                    <div class="discount-pill">31% OFF — Launch pricing ends soon</div>
                 </div>
 
-                <button class="buy-btn" id="purchase-btn">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Email to Purchase
-                </button>
+                <div class="pricing-card-bottom">
+                    <div class="payment-steps">
+                        <div class="payment-step-item">
+                            <div class="ps-num">1</div>
+                            <div class="ps-text">Click the button below to <strong>email us</strong></div>
+                        </div>
+                        <div class="payment-step-item">
+                            <div class="ps-num">2</div>
+                            <div class="ps-text">Receive your <strong>unique payment code</strong> and instructions</div>
+                        </div>
+                        <div class="payment-step-item">
+                            <div class="ps-num">3</div>
+                            <div class="ps-text">Send payment via <strong>Remitly</strong> or your preferred method</div>
+                        </div>
+                        <div class="payment-step-item">
+                            <div class="ps-num">4</div>
+                            <div class="ps-text">Include your code — we verify and <strong>send your app immediately</strong></div>
+                        </div>
+                    </div>
 
-                <div class="pricing-footer-note">Prefer another payment method? Just ask.</div>
+                    <div class="code-block">Your Unique Code: SGRK-XXXX</div>
+
+                    <div class="contact-line">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email confirmation to <a href="mailto:mosasabasaba@soundandcolor.dev">mosasabasaba@soundandcolor.dev</a> with your code
+                    </div>
+
+                    <button class="buy-btn" id="purchase-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email to Purchase
+                    </button>
+
+                    <div class="pricing-footer-note">Prefer another payment method? Just ask.</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section class="faq-section">
-    <div class="faq-inner reveal">
-        <div class="section-header">
-            <div class="section-kicker">FAQ</div>
-            <div class="section-title">Questions from<br>Sales Pros</div>
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-inner reveal">
+            <div class="section-header">
+                <div class="section-kicker">FAQ</div>
+                <div class="section-title">Questions from<br>Sales Pros</div>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-q">How is this different from generic AI writing tools?</div>
+                    <div class="faq-a">Generic tools write in their own voice. SalesGrok learns and mirrors your client's voice — their vocabulary, sentence patterns, formality level, and unique phrases.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Why do I need my own API key?</div>
+                    <div class="faq-a">Bringing your own key means you pay only for what you use, and your data never touches our servers — complete privacy. We'll send setup guides for OpenAI, Anthropic, and more.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will it work with technical/industry jargon?</div>
+                    <div class="faq-a">Absolutely. The more technical your client's writing, the better SalesGrok captures their specific terminology and adapts your writing to match perfectly.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can I save multiple client profiles?</div>
+                    <div class="faq-a">Yes — build a library of client communication styles. Great for long sales cycles and repeat business with existing clients.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What platforms does it run on?</div>
+                    <div class="faq-a">Windows, macOS, and Linux. It's a desktop app that runs locally in your browser — your API key and data stay on your machine.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How much will API usage cost me?</div>
+                    <div class="faq-a">Most users spend $5–20/month depending on volume. Each analysis or transformation costs fractions of a cent. You have full control over the model and frequency.</div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-q">How is this different from generic AI writing tools?</div>
-                <div class="faq-a">Generic tools write in their own voice. SalesGrok learns and mirrors your client's voice — their vocabulary, sentence patterns, formality level, and unique phrases.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Why do I need my own API key?</div>
-                <div class="faq-a">Bringing your own key means you pay only for what you use, and your data never touches our servers — complete privacy. We'll send setup guides for OpenAI, Anthropic, and more.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Will it work with technical/industry jargon?</div>
-                <div class="faq-a">Absolutely. The more technical your client's writing, the better SalesGrok captures their specific terminology and adapts your writing to match perfectly.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Can I save multiple client profiles?</div>
-                <div class="faq-a">Yes — build a library of client communication styles. Great for long sales cycles and repeat business with existing clients.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">What platforms does it run on?</div>
-                <div class="faq-a">Windows, macOS, and Linux. It's a desktop app that runs locally in your browser — your API key and data stay on your machine.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">How much will API usage cost me?</div>
-                <div class="faq-a">Most users spend $5–20/month depending on volume. Each analysis or transformation costs fractions of a cent. You have full control over the model and frequency.</div>
-            </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">SalesGrok</div>
+        <div class="footer-meta">
+            © 2026 — Built for sales professionals &nbsp;·&nbsp;
+            <a href="mailto:mosasabasaba@soundandcolor.dev">mosasabasaba@soundandcolor.dev</a>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-logo">SalesGrok</div>
-    <div class="footer-meta">
-        © 2026 — Built for sales professionals &nbsp;·&nbsp;
-        <a href="mailto:mosasabasaba@soundandcolor.dev">mosasabasaba@soundandcolor.dev</a>
-    </div>
-</footer>
+    <script src="bootstrap.bundle.min.js"></script>
 
-<script>
-    // Scroll reveals
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                observer.unobserve(e.target);
+    <script>
+        // Scroll reveals
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+
+        // Purchase button
+        document.getElementById('purchase-btn').addEventListener('click', function() {
+            const mailtoUrl = 'mailto:mosasabasaba@soundandcolor.dev?subject=I%20want%20to%20buy%20SalesGrok%20&body=Hi%20SalesGrok%20Team,%0A%0AI\'m%20ready%20to%20buy%20SalesGrok.%20Please%20send%20me%20payment%20instructions%20and%20API%20key%20setup%20guide.%0A%0AThanks!';
+            const newWindow = window.open(mailtoUrl, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                window.location.href = mailtoUrl;
             }
         });
-    }, { threshold: 0.1 });
-    reveals.forEach(r => observer.observe(r));
-
-    // Purchase button
-    document.getElementById('purchase-btn').addEventListener('click', function() {
-        const mailtoUrl = 'mailto:mosasabasaba@soundandcolor.dev?subject=I%20want%20to%20buy%20SalesGrok%20&body=Hi%20SalesGrok%20Team,%0A%0AI\'m%20ready%20to%20buy%20SalesGrok.%20Please%20send%20me%20payment%20instructions%20and%20API%20key%20setup%20guide.%0A%0AThanks!';
-        const newWindow = window.open(mailtoUrl, '_blank');
-        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-            window.location.href = mailtoUrl;
-        }
-    });
-</script>
+    </script>
 </body>
 </html>
